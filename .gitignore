@@ -1,0 +1,8 @@
+.sconsign.dblite
+*.synctex.gz
+*.fls
+*.log
+*.out
+*.toc
+*.aux
+*.pdf

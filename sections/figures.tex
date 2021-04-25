@@ -1,0 +1,16 @@
+\section{Figures}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.3\textwidth]{data}
+  \caption{\texttt{figures/svg/data.svg} rendered to \texttt{figures/pdf/data.pdf}}
+\label{fig:data}
+\end{figure}
+This example also compiles figures. It looks for any figures in the \texttt{figures/svg} folder and compiles them to \texttt{figures/pdf} directory. For example Figure \ref{fig:data}. This is allowed to go to abrtirary depth, for example if you have a figured at \texttt{figures/svg/a/b/c/fig.svg} it will be compiled to \texttt{figures/pdf/a/b/c/fig.pdf}. As show in Figure \ref{fig:reeb}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{reeb/toroidal_segment}
+  \caption{\texttt{figures/svg/reeb/toroidal\_segment.svg} rendered to \texttt{figures/pdf/reeb/toroidal\_segment.pdf}}
+\label{fig:reeb}
+\end{figure}
+This could be extended easily enough to rendering figures from code (like plots and things) easily enough. I may come through and add a proof of concept of that later. 
