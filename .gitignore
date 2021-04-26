@@ -1,4 +1,4 @@
-.sconsign.dblite
+# Latex Files
 *.synctex.gz
 *.fls
 *.log
@@ -6,3 +6,9 @@
 *.toc
 *.aux
 *.pdf
+
+# Aspell files
+*.bak
+
+# SCons files
+.sconsign.dblite

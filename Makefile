@@ -4,13 +4,16 @@ SECTIONS=sections/
 
 ALL=$(MAIN) $(FIGURES) $(SECTIONS)
 
-.PHONY: all clean watch
+.PHONY: all clean check watch
 
 all:
 	@scons
 
 clean:
 	@scons --clean
+
+check:
+	@find . -name "*.tex" -exec aspell --home-dir=. -t -c  {} \;
 
 watch:
 	@while true; do \

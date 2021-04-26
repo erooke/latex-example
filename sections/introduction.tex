@@ -8,6 +8,18 @@ understand. The included \texttt{Makefile} then includes a couple useful command
   \item
     \texttt{make watch} watch for any changes, rebuild the document on those changes
   \item
+    \texttt{make check} spell checks the document
+  \item
     \texttt{make clean} remove any build artifacts (including the document itself)
 \end{itemize}
 
+\subsection{Spell checking}
+
+There are two files which help define spell checking behavior. First is the
+personal world list \texttt{.aspell.en.pws} which contains any words which you
+would like to be treated as correct. When you select add in Aspell this is the
+document it adds the word to. The other is the personal replacement list
+\texttt{.aspell.en.prepl} which contains a list of words which you want to be
+automatically replaced. The syntax of this file is \texttt{misspelled\_word
+correction}. To the best of my knowledge there is no way to add to this list
+from Aspell itself. Also it isn't working at the moment. I'm not 100\% sure why.

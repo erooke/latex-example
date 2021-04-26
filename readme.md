@@ -8,5 +8,6 @@ Requirments:
 - scons (to handle dependencies)
 - inkscape (to render figures)
 - inotifytools (for automatic rebuilding)
+- aspell (for spell checking)
 
 Invoking `make` with the rest of the dependencies installed will compile the document.
