@@ -4,6 +4,8 @@ SECTIONS=sections/
 
 ALL=$(MAIN) $(FIGURES) $(SECTIONS)
 
+.PHONY: all clean watch
+
 all:
 	@scons
 
