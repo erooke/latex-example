@@ -22,7 +22,7 @@ for folder, _, files in os.walk(figures / "svg"):
     for figure in files:
         input = figures / "svg" / folder / figure
         output = (figures / "pdf" / folder / figure).with_suffix(".pdf")
-        env.Fig(str(output), str(input))
-        env.Depends(document, str(input))
+        fig = env.Fig(str(output), str(input))
+        env.Depends(document, fig)
 
 # vim: set filetype=python:
