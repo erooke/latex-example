@@ -1,0 +1,21 @@
+import os
+from pathlib import Path
+
+# Tell scons how to render our figures
+inkscape = Builder(
+    action="inkscape --export-area-page --export-filename=$TARGET $SOURCE"
+)
+
+env = Environment(BUILDERS={"Fig": inkscape})
+
+figures = []
+# Add all svg files in the figures directory to the dependency graph
+for folder, _, files in os.walk("svg"):
+    folder = Path(folder).relative_to("svg")
+    for figure in files:
+        input = "svg" / folder / figure
+        output = ("pdf" / folder / figure).with_suffix(".pdf")
+        figures += env.Fig(str(output), str(input))
+
+Return("figures")
+# vim: set filetype=python:
